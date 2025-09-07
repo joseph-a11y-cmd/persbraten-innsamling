@@ -63,23 +63,7 @@ export default function FundraiserLanding() {
           className="object-cover absolute inset-0"
         />
 
-        {/* Logos */}
-        <div className="absolute inset-0 flex justify-between p-4 md:p-8 z-10">
-          <Image
-            src="/logo-left.png"
-            alt="Left Logo"
-            width={64}
-            height={64}
-            className="md:h-16"
-          />
-          <Image
-            src="/logo-right.png"
-            alt="Right Logo"
-            width={64}
-            height={64}
-            className="md:h-16"
-          />
-        </div>
+      
 
         {/* Hero text overlay */}
         <div className="absolute inset-0 bg-black/30 flex items-center justify-center text-center text-white px-4 z-0">
