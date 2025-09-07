@@ -1,7 +1,8 @@
 'use client';
 
 import React from "react";
-import { Mail, Copy, Snowflake, HeartHandshake, ClipboardList, Shovel, Baby, Store, PhoneCall } from "lucide-react";
+import Image from "next/image";
+import { Mail, Copy, ClipboardList, Shovel, Baby, Store, LucideIcon } from "lucide-react";
 
 // ===== Helper: copy-to-clipboard =====
 async function copy(text: string) {
@@ -14,12 +15,6 @@ async function copy(text: string) {
 }
 
 // ===== Small UI building blocks =====
-const Pill = ({ children }: { children: React.ReactNode }) => (
-  <span className="inline-flex items-center gap-2 rounded-full bg-white/70 backdrop-blur px-4 py-2 text-sky-900 shadow-sm ring-1 ring-sky-200">
-    {children}
-  </span>
-);
-
 const Section = ({ id, title, children, kicker }: { id: string; title: string; children: React.ReactNode; kicker?: string }) => (
   <section id={id} className="mx-auto max-w-5xl px-4 py-14 md:py-20">
     <div className="mx-auto max-w-3xl text-center">
@@ -32,7 +27,15 @@ const Section = ({ id, title, children, kicker }: { id: string; title: string; c
   </section>
 );
 
-const Card = ({ icon: Icon, title, children }: { icon: React.ComponentType<any>; title: string; children: React.ReactNode }) => (
+const Card = ({
+  icon: Icon,
+  title,
+  children,
+}: {
+  icon: LucideIcon;
+  title: string;
+  children: React.ReactNode;
+}) => (
   <div className="group rounded-2xl bg-white/80 backdrop-blur p-6 shadow-sm ring-1 ring-slate-200 hover:shadow-md transition">
     <div className="flex items-center gap-3">
       <div className="grid h-10 w-10 place-items-center rounded-xl bg-sky-50 ring-1 ring-sky-100">
@@ -53,12 +56,29 @@ export default function FundraiserLanding() {
     <div className="min-h-screen bg-gradient-to-br from-sky-50 via-white to-sky-100 text-slate-800">
       {/* Header / Hero */}
       <header className="relative w-full h-[400px] md:h-[500px]">
-        <img src="/header.jpg" alt="Persbråten class ski trip" className="absolute inset-0 w-full h-full object-cover" />
+        <Image
+          src="/header.jpg"
+          alt="Persbråten class ski trip"
+          fill
+          className="object-cover absolute inset-0"
+        />
 
         {/* Logos */}
         <div className="absolute inset-0 flex justify-between p-4 md:p-8 z-10">
-          <img src="/logo-left.png" alt="Left Logo" className="h-12 md:h-16" />
-          <img src="/logo-right.png" alt="Right Logo" className="h-12 md:h-16" />
+          <Image
+            src="/logo-left.png"
+            alt="Left Logo"
+            width={64}
+            height={64}
+            className="md:h-16"
+          />
+          <Image
+            src="/logo-right.png"
+            alt="Right Logo"
+            width={64}
+            height={64}
+            className="md:h-16"
+          />
         </div>
 
         {/* Hero text overlay */}
