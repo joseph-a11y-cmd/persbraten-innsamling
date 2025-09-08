@@ -106,6 +106,15 @@ export default function FundraiserLanding() {
         <div className="mx-auto max-w-2xl">
           <div className="rounded-2xl bg-white/80 backdrop-blur p-6 md:p-8 shadow-sm ring-1 ring-slate-200">
             <p className="text-lg md:text-xl font-semibold text-slate-900">Gi oss en jobb – vi stiller opp!</p>
+              <div className="flex justify-center my-6">
+        <Image
+          src="/qr-vipps.png"
+          alt="Vipps QR kode"
+          width={160}
+          height={160}
+          className="rounded-xl border border-slate-200"
+        />
+      </div>
             <div className="mt-5 grid grid-cols-1 gap-4">
               <div className="flex items-center justify-between rounded-xl ring-1 ring-slate-200 bg-slate-50 px-4 py-3">
                 <div>
