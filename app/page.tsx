@@ -112,7 +112,7 @@ export default function FundraiserLanding() {
           alt="Vipps QR kode"
           width={160}
           height={160}
-          className="rounded-xl border border-slate-200"
+          className="border border-slate-200"
         />
       </div>
             <div className="mt-5 grid grid-cols-1 gap-4">
