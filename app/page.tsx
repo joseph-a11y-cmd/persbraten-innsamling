@@ -56,6 +56,10 @@ export default function FundraiserLanding() {
     <div className="min-h-screen bg-gradient-to-br from-sky-50 via-white to-sky-100 text-slate-800">
       {/* Header / Hero */}
       <header className="relative w-full h-[400px] md:h-[500px]">
+          {/* Logo text in top left */}
+  <div className="absolute top-4 left-4 z-10 px-4 py-2 font-bold text-white">
+    2IDA &amp; 2IDB
+  </div>
         <Image
           src="/header.jpg"
           alt="Persbråten class ski trip"
