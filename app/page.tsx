@@ -48,7 +48,7 @@ const Card = ({
 );
 
 export default function FundraiserLanding() {
-  const vipps = "000000"; // <-- SETT RIKTIG VIPPS-NR HER
+  const vipps = "4039UQ"; // <-- SETT RIKTIG VIPPS-NR HER
   const konto = "1229.18.11068"; // <-- SETT RIKTIG KONTONR HER
   const email = "persbraten.tur@gmail.com";
 
